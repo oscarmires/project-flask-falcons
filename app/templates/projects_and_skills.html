@@ -3,7 +3,7 @@
 {% extends 'base.html' %}
 
 {% block header %}
-{{ components.backHomeButton() }}
+
 <span>Sambina Islam Aninta</span>
 {% endblock %}
 
@@ -13,104 +13,6 @@
 
 {% block content %}
 
-<h1>{{ title }}</h1>
-
-<div class="page-projects">
-    <h3>TECHNICAL SKILLS </h3>
-    <h4> LANGUAGES </h4>
-    <li>
-        Python (NumPy, Pandas, Biopython, Scikit-learn, Tensorflow*, Keras*), BASH/ Shell, Java,
-        R (ggplot2, tidyverse, DeSeq2, ggtree, tibble, dplyr, cowplot), Typescript, JavaScript, HTML, SQL
-    </li>
-
-    <h4> LIBRARIES, FRAMEWORKS AND TECHNOLOGIES </h4>
-    <li>
-        Node.js, Plotly/Dash, Git & Github, JIRA, Unix/LINUX, Mocha and Chai, Kubernetes, Oracle/PostgreSQL
-    </li>
-
-    <h3> BIOINFORMATICS TOOLS AND WET LAB SKILLS </h3>
-    <h4> MOLECULAR BIOLOGY </h4>
-    <li> RT-PCR, qPCR, PCR, Agarose Gel Electrophoresis and Gel purification, SDS-PAGE</li>
-    <h4> SEQUENCING</h4>
-    <li> Sanger and NGS</li>
-    <h4> LAB SKILLS </h4>
-    <li> Pipetting, Centrifuging, Nanodroping</li>
-    <h4> CLONING </h4>
-    <li> Transfection, Topo cloning, Golden gate cloning, Gibson assembly, DNA/RNA/plasmid extraction</li>
-    <h4> TOOLS </h4>
-    <li>Genome Sequencing Technology (De Novo Genome Assembly, BioBloom Tools, NGS, MUSCLE, HMMER,TransDecoder)
-    </li>
-    <h4> SOFTWARE</h4>
-    <li> Geneious Prime, Clonify</li>
-
-</div>
-<div class="page-projects">
-    <h3>Vaccine Clinic Database, Academic Project for Introduction to Relational Database</h3>
-
-    <li>
-        Designed and implemented a web-application with a database for Vaccine Clinic in a team of 3
-    </li>
-    <li>
-        Functionalities allow patients to register for vaccine appointments, nurses to record
-        and analyse patient history and administer vaccines and clinic managers to place orders from
-        manufacturers to support Vaccine Clinic operations
-    </li>
-    <li> Implemented a RESTful API to interact with users and the backend using
-        Javascript and functionalities using SQL queries that supports performing
-        aggregations and nested query to retrieve results for users
-    </li>
-    <li>
-        Performed extensive testing using PostgreSQL
-    </li>
-
-    <h3>Insight-UBC, Academic Project for Introduction to Software Engineering</h3>
-
-    <li>
-        Designed and developed a full-stack web query engine in an Agile environment utilizing a test driven development
-        approach to pair program in a team of 2
-    </li>
-    <li> Implemented the backend that parses JSON and HTML files, validates and performs search queries
-        efficiently from a database of 6000 UBC courses and buildings using TypeScript
-    </li>
-    <li>
-        Implemented a RESTful API and a discord bot UI that utilized Google Maps API to interact with users
-    </li>
-    <li>
-        Performed extensive blackbox testing using Mocha and Chai testing frameworks that achieved 100% code
-        coverage
-    </li>
-
-
-    <h3> Knit, Second place winner, Hack4Health-2021 </h3>
-    <li>
-        Developed a webapp that uses React to provide a platform to build community among elders living in senior homes
-        through local businesses delivering workshops catered to the interests of the elders
-    </li>
-    <li>
-        Collected data from local businesses and senior homes and collaborated with them to organize a pilot workshop
-    </li>
-    <li>
-        Collaborated with other developers and UX/UI designers to brainstorm ideas and prototyping them in Figma
-    </li>
-
-    <h3> HIV Tree, Personal Project</h3>
-
-    <li>
-        Analysed Human Immunodeficiency Virus -1 (HIV) genome to observe evolution of the virus over time
-    </li>
-
-    <li>
-        Used BLAST (Basic Local Alignment Search Tool) and GenBank to prepare a fasta file containing HIV-1 genome
-        sequences
-    </li>
-    <li>
-        Performed Multiple Sequence Alignment using MUSCLE and Simple Phylogeny to generate a phylogenetic tree in
-        Newick format
-
-    </li>
-    <li>
-        Used R (ggtree, tidyverse and ape) to build phylogenetic trees and cladogram to visualize the results
-    </li>
-</div>
+    {{ components.menuBar(includeHome=true) }}
 
 {% endblock %}

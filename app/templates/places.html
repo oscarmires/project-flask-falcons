@@ -3,28 +3,23 @@
 {% extends 'base.html' %}
 
 {% block header %}
-{{ components.backHomeButton() }}
-<span>Sambina Islam Aninta</span>
+
+    <span>Sambina Islam Aninta</span>
 {% endblock %}
 
 {% block title %}
-{{ Title }}
+    {{ Title }}
 {% endblock %}
 
 {% block content %}
-
-<h1>{{ title }}</h1>
-<p>Check out the countries I've visited!</p>
-<div class="country-tags-area">
-    {% for country in countries %}
-    <span class="country-tag">{{ country }}</span>
-    {% endfor %}
-</div>
-<iframe
-        src="https://www.google.com/maps/d/u/0/embed?mid=1-TAdsdcffMsWUrLisMgPoK6mG4NBMtQ&ehbc=2E312F"
-        max-width="800"
-        width="100%"
-        height="480"
-></iframe>
-
+{{ components.menuBar(includeHome=true) }}
+    <p>Check out the countries I've visited!</p>
+    <div class="country-tags-area">
+        {% for country in countries %}
+            <span class="country-tag">{{ country }}</span>
+        {% endfor %}
+    </div>
+    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1PkcvYdKcjN5FroY5ZQ0YvLc-Y4Z52tw&ehbc=2E312F" width="100%"
+            max-width="800"
+            height="480"></iframe>
 {% endblock %}

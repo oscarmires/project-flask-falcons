@@ -3,36 +3,42 @@
 -->
 
 {% macro backHomeButton() -%}
-<a href="/" class="back-home-btn">
-    <img src="../../static/img/icons8-home-64.png">
-</a>
+    <a href="/" class="back-home-btn">
+        <img src="../../static/img/icons8-home-64.png">
+    </a>
 {%- endmacro %}
 <!---->
-{% macro menuBar() -%}
-<nav class="menu-bar">
-    <ul>
-        <li style="list-style-type: none">
-            <a href="/experience"
+{% macro menuBar(includeHome=false) -%}
+    <nav class="menu-bar">
+        <ul>
+            {% if includeHome %}
+                <li style="list-style-type: none">
+                    <a href="/"
+                    ><img src="../../static/img/icons8-home-64.png" width="70" height="70"/></a>
+                </li>
+            {% endif %}
+            <li style="list-style-type: none">
+                <a href="/experience"
                 ><img src="../../static/img/icons8-research-64.png" width="80" height="80"/></a>
-        </li>
-        <li style="list-style-type: none">
-            <a href="/education"
+            </li>
+            <li style="list-style-type: none">
+                <a href="/education"
                 ><img src="../../static/img/icons8-education-64.png"/></a>
-        </li>
-        <li style="list-style-type: none">
+            </li>
+            <li style="list-style-type: none">
 
-            <a href="/projects"
+                <a href="/projects"
                 ><img src="../../static/img/icons8-computer-64.png"/></a>
-        </li>
-        <li style="list-style-type: none">
-            <a href="/places"
+            </li>
+            <li style="list-style-type: none">
+                <a href="/places"
                 ><img src="../../static/img/icons8-map-64.png"/></a>
-        </li>
-        <li style="list-style-type: none">
-            <a href="/hobbies"
+            </li>
+            <li style="list-style-type: none">
+                <a href="/hobbies"
                 ><img src="../../static/img/icons8-paint-64.png"/></a>
-        </li>
-    </ul>
-    <span class="menu-guide"></span>
-</nav>
+            </li>
+        </ul>
+        <span class="menu-guide"></span>
+    </nav>
 {%- endmacro %}
