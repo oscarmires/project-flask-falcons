@@ -1,9 +1,21 @@
+{% extends 'base.html' %}
 {% import 'components.html' as components %}
 
-{% extends 'base.html' %}
+<!---->
+{% macro education_item(degree) -%}
+    <div class="job-item">
+        <div class="job-item-info">
+            <h2>{{ degree.title }}</h2>
+            <span class="job-organization">{{ degree.organization }}</span>
+            <span class="job-date">{{ degree.date }}</span>
+        </div>
+        <div class="job-item-logo">
+            <img class="job-item-img" src="{{ degree.logo_url }}"/>
+        </div>
+    </div>
+{%- endmacro %}
 
 {% block header %}
-    {{ components.backHomeButton() }}
     <span>Sambina Islam Aninta</span>
 {% endblock %}
 
@@ -12,41 +24,7 @@
 {% endblock %}
 
 {% block content %}
-
-    <h1>{{ title }}</h1>
-    <img src="../../static/img/logo.png" width="80" height="100" alt="UBC Logo">
-    <h2>Bachelor of Science, The University of British Columbia</h2>
-    <h3> August 2018-Present (Expected graduation: 2023) </h3>
-    <h4>SPECIALIZATION</h4>
-    <ul>
-        <li> Combined Honours in Biology and Computer Science</li>
-        <li>Science Scholar (2019, 2021) & Dean's Honour List (2019, 2020, 2021)</li>
-        <li> Completed third year with a 89.1% Cumulative GPA</li>
-    </ul>
-
-
-    <h4> AWARDS </h4>
-    <ul>
-        <li>
-            Karen McKellin International Leader of Tomorrow (KMILOT) Award (Awarded to 34 incoming
-            international students annually)
-        </li>
-
-        <li>
-            Department of Computer Science Scholarship to attend Virtual Grace Hopper Celebration (vGHC) 2021
-        </li>
-
-        <li>
-            Clayton Person Memorial Scholarship in Biology for receiving highest standing in BIOL 234/335 (Genetics)
-        </li>
-
-        <li>
-            Faculty of Science International Student Scholarship in 2020W for demonstrating strong academic
-            achievement and engagement in the Faculty
-        </li>
-        <li>
-            Trek and J. Fred Muir scholarship for being in top 5% of the Faculty in 2019
-        </li>
-    </ul>
+    {{ components.menuBar(includeHome=true) }}
+    {{ education_item({"title": "B.S. Computer Science", "organization": "Instituto Tecnológico y de Estudios Superiores de Monterrey", "date": "2019 - 2023", "logo_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.ashoka.org%2Fsites%2Fdefault%2Ffiles%2Ftec-de-monterrey-logo.png&f=1&nofb=1"}) }}
 
 {% endblock %}

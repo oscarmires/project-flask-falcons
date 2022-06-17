@@ -1,0 +1,10 @@
+[
+  {
+    "name": "The cat",
+    "images": ["../../static/img/hobbies/cat1.jpeg", "../../static/img/hobbies/cat2.jpeg", "../../static/img/hobbies/cat3.jpeg"]
+  },
+  {
+    "name": "Piano",
+    "images": ["../../static/img/hobbies/piano1.png", "../../static/img/hobbies/piano2.jpg"]
+  }
+]

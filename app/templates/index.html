@@ -1,36 +1,27 @@
+{% extends 'base.html' %}
 {% import 'components.html' as components %}
 
-{% extends 'base.html' %}
-
 {% block title %}
-About me
+    About me
 {% endblock %}
 
 {% block content %}
 
-<p>Sambina Islam Aninta</p>
-<h1>
-    {{ title }}
-</h1>
+    <div class="home-grid">
 
-<div class="sambina-home-img">
-    <img src="../../static/About.jpg" alt="Sambina">
-</div>
+        <div class="home-img-container">
+            <img src="../../static/img/oscar.jpeg" alt="Sambina">
+        </div>
 
-<p>
-    Hello! I am Sambina and I am doing a Combined Computer Science and Biology Honours at the University
-    of British Columbia. I love learning about Healthcare Technology and clinical Bioinformatics and I
-    am passionate about STEM education for girls coming from FGLI (First-Generation Low-Income)
-    backgrounds. You can learn more about my club, UBC STEM Fellowship and the events we organize to
-    support STEM students from all backgrounds!
-</p>
-<p style="margin-bottom: 28px">
-    When I am not busy coding or working in the lab with my beautiful RNA babies,
-    I love hiking and exploring the street and beaches of beautiful British Columbia. Check out projects
-    and my experiences below and you can contact me if you are interested to learn more about any of my
-    projects or go on a walk with me <3
-</p>
+        <p>
+            Hi! I'm Oscar, a Software Engineering student at Tec de Monterrey, Mexico, and
+            a Production Engineering fellow at MLH!
+            <br>
+            I'm currently working in web development projects, but I'm also interested in ML and I have a cat!
+        </p>
+    </div>
 
-{{ components.menuBar() }}
+
+    {{ components.menuBar() }}
 
 {% endblock %}
