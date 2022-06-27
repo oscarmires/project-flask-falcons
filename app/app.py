@@ -1,7 +1,6 @@
 import os
 from flask import Flask, render_template, request, url_for
 from dotenv import load_dotenv
-import requests
 
 from peewee import *
 import datetime
