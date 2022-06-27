@@ -224,3 +224,10 @@ header a:visited {
     height: 450px;
     margin-right: 20px;
 }
+
+/* Timeline */
+.post {
+    background-color: #003564;
+    padding: 10px;
+    margin-bottom: 16px;
+}

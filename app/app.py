@@ -1,6 +1,8 @@
 import os
 from flask import Flask, render_template, request, url_for
+from flask_cors import cross_origin, CORS
 from dotenv import load_dotenv
+import requests
 
 from peewee import *
 import datetime
@@ -10,6 +12,7 @@ import json
 
 load_dotenv()
 app = Flask(__name__)
+cors = CORS(app, resources={r"/api/*": {"origins": "http://127.0.0.1/"}})
 
 mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
                      user=os.getenv("MYSQL_USER"),
@@ -70,8 +73,16 @@ def projects():
     return render_template('projects_and_skills.html', title="Projects", url=os.getenv("URL"))
 
 
-# Retrieval Endpoints
+@app.route('/timeline')
+def timeline():
+    posts = get_time_line_post()["timeline_posts"]
+
+    return render_template('timeline.html', title="Timeline", url=os.getenv("URL"), posts=posts)
+
+
+# DB Retrieval Endpoints
 @app.route('/api/timeline_post', methods=['POST'])
+@cross_origin()
 def post_time_line_post():
     name = request.form['name']
     email = request.form['email']
