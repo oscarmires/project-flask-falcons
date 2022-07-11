@@ -231,3 +231,33 @@ header a:visited {
     padding: 10px;
     margin-bottom: 16px;
 }
+
+form {
+    background-color: #003564;
+    padding: 20px;
+}
+
+form input {
+    margin: 10px 0;
+    height: 2.5rem;
+    width: 100%;
+}
+
+#wrong-email-span {
+    background-color: rgba(255, 255, 0, 0.25);
+    font-style: italic;
+    border-radius: 5px;
+    padding: 2px 10px;
+}
+
+#timeline-submit-btn {
+    color: white;
+    height: 2.3rem;
+    background-color: #00203f;
+    border: 0;
+    margin-bottom: 0;
+}
+
+#timeline-submit-btn:hover {
+    cursor: pointer;
+}
