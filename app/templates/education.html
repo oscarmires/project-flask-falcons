@@ -19,9 +19,7 @@
     <span>Sambina Islam Aninta</span>
 {% endblock %}
 
-{% block title %}
-    {{ Title }}
-{% endblock %}
+{% block title %}{{ title }}{% endblock %}
 
 {% block content %}
     {{ components.menuBar(includeHome=true) }}

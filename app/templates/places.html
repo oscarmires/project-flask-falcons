@@ -1,9 +1,7 @@
 {% extends 'base.html' %}
 {% import 'components.html' as components %}
 
-{% block title %}
-    {{ Title }}
-{% endblock %}
+{% block title %}{{ title }}{% endblock %}
 
 {% block content %}
 {{ components.menuBar(includeHome=true) }}
