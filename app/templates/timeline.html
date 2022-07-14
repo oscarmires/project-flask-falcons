@@ -10,7 +10,7 @@
         <label for="name" class="timeline-form-label">Name:</label><br>
         <input type="text" id="name" name="name" placeholder="Type your name" required><br>
         <label for="email" class="timeline-form-label">Email:</label>
-        <span id="wrong-email-span" style="display: none"> ⚠️ Wrong email</span><br>
+        <span id="wrong-email-span" style="display: none"> ⚠️ Invalid email</span><br>
         <input type="text" id="email" name="email" placeholder="Type your email address" required><br>
         <label for="content" class="timeline-form-label">Content:</label><br>
         <input type="text" id="content" name="content" required><br>
@@ -67,6 +67,9 @@
                     console.log(error)
                     if (error.message.includes("Invalid email")) {
                         document.getElementById("wrong-email-span").style.display = "inline";
+                        const emailInput = document.getElementById("email")
+                        emailInput.style.backgroundColor = "#ffffd3"
+                        emailInput.focus()
                     } else {
                         alert(error)
                     }
