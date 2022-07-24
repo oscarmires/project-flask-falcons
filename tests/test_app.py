@@ -15,9 +15,8 @@ class AppTestCase(unittest.TestCase):
         response = self.client.get("/")
         assert response.status_code == 200
         html = response.get_data(as_text=True)
-        # assert "<title>MLH Fellow</title>" in html : Our page does not have MLH Fellow as Title
 
-        assert '<p style="margin-bottom: 0">Oscar Miranda Escalante</p>' in html
+        assert 'Oscar Miranda Escalante' in html
         assert '<nav class="menu-bar">' in html
         assert '</nav>' in html
         # home has image
