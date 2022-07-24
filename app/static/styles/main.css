@@ -10,12 +10,11 @@ body {
     background-size: cover;
     width: auto;
     overflow-x: hidden;
-    font-family: "Roboto", serif;
+    font-family: "Raleway", serif;
     margin: 0px;
 }
 
 header {
-    font-family: "Roboto", serif;
     padding: 50px 20px 20px 20px;
     margin: 0 auto;
     height: 40px;
@@ -23,6 +22,15 @@ header {
 
     display: flex;
     justify-content: space-between;
+}
+
+.site-title-header {
+    text-decoration: none;
+    margin-bottom: 0;
+}
+
+.site-title-header:visited {
+    color: white;
 }
 
 @media (max-width: 600px) {
