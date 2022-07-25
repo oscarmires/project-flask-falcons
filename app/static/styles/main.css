@@ -236,13 +236,15 @@ header a:visited {
 /* Timeline */
 .post {
     background-color: #003564;
-    padding: 10px;
+    padding: 20px;
     margin-bottom: 16px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
 form {
     background-color: #003564;
     padding: 20px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
 form input {
