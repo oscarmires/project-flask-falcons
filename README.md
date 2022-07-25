@@ -1,6 +1,6 @@
 # 🦅 FLask Falcons - Portfolio Site
 
-Welcome to our portfolio site! This site is intended to be used as a tamplate by any team member who wants to create a portfolio. 
+Welcome to my portfolio site! This site is intended to be used as a tamplate by any team member who wants to create a portfolio. 
 
 ## Installation
 
