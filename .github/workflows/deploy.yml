@@ -4,9 +4,42 @@ on:
   push:
     branches:
       - main
-    workflow_dispatch:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    types:
+      - closed
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: Run Tests
+    env:
+      TESTING: true
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.8.9'
+
+      - name: Setup Python Virtual Environment
+        run: python -m venv python3-virtualenv
+
+      - name: Install Dependencies
+        run: python3-virtualenv/bin/pip install -r requirements.txt
+
+      - name: Run Tests
+        run: ./run_test.sh
+
+      - name: Notify on fail
+        if: ${{ failure() }}
+        run: curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚨 Testing failed ($GITHUB_ACTION - id=$GITHUB_RUN_ID)"
+
+
   deploy:
     name: "Deploy to VPS"
     runs-on: ubuntu-latest
