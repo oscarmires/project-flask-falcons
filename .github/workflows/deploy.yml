@@ -66,12 +66,12 @@ jobs:
         run: ssh my-vps '~/redeploy-site.sh'
 
       - name: Print out container status
-        run: docker-compose ps
+        run: docker compose ps
 
       - name: Notify on success
         if: ${{ success() }}
-        run: curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚀 Deployment Successful ($GITHUB_ACTION - id $GITHUB_RUN_ID)"
+        run: curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚀 Deployment Successful (id $GITHUB_RUN_ID)"
 
       - name: Notify on fail
         if: ${{ failure() }}
-        run: curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚨 Deployment failed ($GITHUB_ACTION - id $GITHUB_RUN_ID)"
+        run: curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚨 Deployment failed (id $GITHUB_RUN_ID)"
