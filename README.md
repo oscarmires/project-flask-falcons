@@ -1,6 +1,6 @@
 # 🦅 FLask Falcons - Portfolio Site
 
-Welcome to our portfolio site! This site is intended to be used as a tamplate by any team member who wants to create a portfolio. 
+Welcome to my portfolio site!
 
 ## Installation
 
@@ -43,6 +43,7 @@ You'll now be able to access the website at `localhost:5000` or `127.0.0.1:5000`
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Changes need to pass tests to be approved.
 
 Please make sure to update tests as appropriate.
 
