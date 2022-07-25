@@ -66,7 +66,7 @@ jobs:
         run: ssh my-vps '~/redeploy-site.sh'
 
       - name: Print out container status
-        run: cd project-flask-falcons/ && compose ps
+        run: cd project-flask-falcons && docker compose ps
 
       - name: Notify on success
         if: ${{ success() }}
